@@ -29,3 +29,9 @@ $ telnet <host> <port>
 ```
 $ ./post.py <host> <port> <file-path>
 ```
+
+## Screencast
+
+This project is initially developed on a livestream:
+
+[![thumbnail](./thumbnail.png)](https://www.youtube.com/watch?v=ilH6qb1AP6s)
