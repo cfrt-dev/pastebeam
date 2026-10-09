@@ -1,0 +1,12 @@
+services:
+  pastebeam:
+    build: .
+    image: pastebeam
+    restart: unless-stopped
+    ports:
+      - "6969:6969"
+    volumes:
+      - posts:/app/posts
+
+volumes:
+  posts:

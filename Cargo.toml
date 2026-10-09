@@ -1,0 +1,10 @@
+[package]
+name = "pastebeam"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "TCP-only pastebin-like service"
+
+[dependencies]
+getrandom = "0.4.3"
+tokio = { version = "1.53.2", features = ["rt-multi-thread", "macros", "net", "io-util", "fs", "signal", "time"] }

@@ -3,16 +3,31 @@
 > [!WARNING]
 > The protocol is not fully finalized yet, so anything can be changed at any moment. For the latest info on how the protocol works always consult this repos code.
 
-TCP-only pastebin-like service with Proof-of-Work.
+TCP-only pastebin-like service.
 
 ## Quick Start
 
 ### Server
 
 ```console
-$ erl
-> c(pastebeam).
-> pastebeam:start().
+$ cargo run --release -- [<port>] [<posts-root>]
+```
+
+By default it listens on port `6969` and stores posts in `./posts/`.
+
+### Server (Docker)
+
+```console
+$ docker compose up -d
+```
+
+Posts are stored in the `posts` volume.
+
+Without Compose:
+
+```console
+$ docker build -t pastebeam .
+$ docker run -d --name pastebeam --restart unless-stopped -p 6969:6969 -v pastebeam-posts:/app/posts pastebeam
 ```
 
 ### Client
